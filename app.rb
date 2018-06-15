@@ -10,5 +10,7 @@ class App < Sinatra::Base
     @student = Student.new(params[:student])
     params[:student][:courses].each do |details|
       Course.new(details)
+    end
+    @courses = Course.all
   end
 end
