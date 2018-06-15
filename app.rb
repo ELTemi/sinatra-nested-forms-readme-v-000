@@ -6,5 +6,7 @@ class App < Sinatra::Base
     erb :new
   end
 
-  post "/student"
+  post "/student" do
+    @student = Student.new(params[:student])
+  end
 end
